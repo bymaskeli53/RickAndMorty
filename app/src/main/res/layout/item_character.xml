@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="4dp"
+
+    android:background="@color/color_character_background"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+
+        android:id="@+id/iv_character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:elevation="5dp"
+        android:maxWidth="50dp"
+        android:maxHeight="50dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="?attr/actionButtonStyle"
+        app:shapeAppearanceOverlay="@style/imageViewRounded"
+        app:strokeColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="Rick"
+        android:textSize="32sp"
+        app:layout_constraintStart_toEndOf="@id/iv_character"
+        app:layout_constraintTop_toTopOf="@id/iv_character" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_alive"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_alive"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:shapeAppearanceOverlay="@style/imageViewRounded" />
+
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/alice"
+        android:text="Alive"
+        app:layout_constraintBottom_toBottomOf="@id/iv_alive"
+        app:layout_constraintStart_toEndOf="@id/iv_alive"
+
+        app:layout_constraintTop_toTopOf="@id/iv_alive" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+
+        android:fontFamily="@font/autour_one"
+        android:text="Human"
+        app:layout_constraintBottom_toBottomOf="@id/tv_info"
+        app:layout_constraintStart_toEndOf="@id/tv_info"
+        app:layout_constraintTop_toTopOf="@id/tv_info" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
